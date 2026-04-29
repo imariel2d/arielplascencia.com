@@ -18,11 +18,23 @@ const SocialIcon: FC<{ icon: string }> = ({ icon }) => {
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     ),
+    resume: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M7 18h10M7 14h10M7 10h4m4-8H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V8l-4-4z"
+        />
+      </svg>
+    ),
   }
   return <>{icons[icon] ?? null}</>
 }
 
 export const Hero: FC = () => {
+  const resumeLink = config.socials.find((social) => social.label.toLowerCase() === 'resume')
+
   return (
     <section
       id="hero"
@@ -64,6 +76,16 @@ export const Hero: FC = () => {
           >
             View my work
           </a>
+          {resumeLink && (
+            <a
+              href={resumeLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full bg-white/10 border border-violet-500/60 hover:bg-white/15 text-violet-200 hover:text-white font-medium transition-all hover:scale-105"
+            >
+              View Resume
+            </a>
+          )}
           <a
             href={`mailto:${config.email}`}
             className="px-6 py-3 rounded-full border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-white font-medium transition-all hover:scale-105"

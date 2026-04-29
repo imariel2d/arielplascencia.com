@@ -6,6 +6,7 @@ export interface SocialLink {
 
 export interface Project {
   title: string
+  category?: string
   description: string
   tags: string[]
   liveUrl?: string
@@ -33,7 +34,7 @@ export interface PortfolioConfig {
 }
 
 const config: PortfolioConfig = {
-  name: 'Your Name',
+  name: 'Ariel Plascencia',
   title: 'Full-Stack Developer',
   tagline: 'I build fast, beautiful, and accessible web experiences.',
   about:
@@ -41,12 +42,16 @@ const config: PortfolioConfig = {
     'I love working with TypeScript, React, and Node.js, and I care deeply about clean code, ' +
     'great UX, and developer experience.',
   avatarUrl: 'https://avatars.githubusercontent.com/u/583231?v=4',
-  email: 'hello@yourname.dev',
+  email: 'imariel2d@gmail.com',
 
   socials: [
-    { label: 'GitHub', url: 'https://github.com/yourname', icon: 'github' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/yourname', icon: 'linkedin' },
-    { label: 'Twitter', url: 'https://twitter.com/yourname', icon: 'twitter' },
+    { label: 'GitHub', url: 'https://github.com/imariel2d', icon: 'github' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/arielplascencia/', icon: 'linkedin' },
+    {
+      label: 'Resume',
+      url: 'https://drive.google.com/file/d/1Zth_nmEYDz8W-9REuYUNZSF7hlCX6dt-/view?usp=sharing',
+      icon: 'resume',
+    },
   ],
 
   skills: [
@@ -62,51 +67,67 @@ const config: PortfolioConfig = {
 
   projects: [
     {
-      title: 'Project Alpha',
+      title: 'Pomodoro App',
+      category: 'My Projects',
       description:
-        'A full-stack SaaS platform with real-time collaboration, built with Next.js and Supabase.',
-      tags: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind'],
-      liveUrl: 'https://example.com',
-      repoUrl: 'https://github.com/yourname/project-alpha',
+        'Pomodoro timer for studying, focus, and deep work to help people stay productive with structured work sessions.',
+      tags: ['React', 'TypeScript', 'Productivity'],
+      liveUrl: 'https://focuswithpomo.com/',
     },
     {
-      title: 'Project Beta',
+      title: 'Culto Perro Cafe',
+      category: 'Tepache Projects',
       description:
-        'An open-source CLI tool that automates repetitive dev workflows, used by 500+ developers.',
-      tags: ['Node.js', 'TypeScript', 'CLI'],
-      repoUrl: 'https://github.com/yourname/project-beta',
+        'Worked as a project manager to help lead the development of this coffee shop website.',
+      tags: ['Project Management', 'E-commerce', 'Team Leadership'],
+      liveUrl: 'https://www.perro.cafe/',
     },
     {
-      title: 'Project Gamma',
+      title: 'Dolar en Bancos',
+      category: 'Tepache Projects',
       description:
-        'A performant e-commerce storefront with server components and edge-deployed APIs.',
-      tags: ['React', 'Remix', 'Cloudflare Workers'],
-      liveUrl: 'https://example.com',
-      repoUrl: 'https://github.com/yourname/project-gamma',
+        'App for tracking dollar to peso conversion rates across different Mexican banks.',
+      tags: ['Fintech', 'Web App', 'Mexico'],
+      liveUrl: 'https://dolarenbancos.com/',
+    },
+    {
+      title: 'Es Legal Mi Trabajo',
+      category: 'Tepache Projects',
+      description:
+        'Website to help workers understand if labor conditions at their job are legal in Mexico.',
+      tags: ['Legal Tech', 'Information Platform', 'Mexico'],
+      liveUrl: 'https://eslegalmitrabajo.com/',
     },
   ],
 
   experience: [
     {
-      company: 'Acme Corp',
-      role: 'Senior Frontend Engineer',
-      period: '2023 – Present',
+      company: 'The Shift Network',
+      role: 'Software Engineer',
+      period: 'Mar 2023 - Present',
       description:
-        'Led the migration of a legacy Angular app to React/TypeScript, reducing bundle size by 40%.',
+        'Leading full-stack product initiatives with Next.js and TypeScript, designing reliable integrations across internal platforms, and building AI-assisted tools that reduce repetitive work and accelerate delivery.',
     },
     {
-      company: 'Startup XYZ',
-      role: 'Full-Stack Developer',
-      period: '2021 – 2023',
+      company: 'Framework Science',
+      role: 'Frontend Engineer',
+      period: 'Jul 2021 - Jan 2023',
       description:
-        'Built and maintained core product features, designed REST and GraphQL APIs consumed by mobile clients.',
+        'Owned frontend architecture across multiple React products, mentored junior teammates, improved release confidence through automated testing, and modernized CI pipelines for dramatically faster deployments.',
     },
     {
-      company: 'Freelance',
-      role: 'Web Developer',
-      period: '2019 – 2021',
+      company: 'Guaostudio',
+      role: 'Frontend Developer',
+      period: 'Feb 2021 - May 2021',
       description:
-        'Delivered over 15 client projects ranging from marketing sites to custom CMS integrations.',
+        'Built a client-facing MVP from zero to production with Next.js, integrated CMS-driven content workflows, and partnered with design and PM teams to deliver polished features on aggressive timelines.',
+    },
+    {
+      company: 'El Culto al Perro Cafe',
+      role: 'Software Engineer',
+      period: 'Oct 2019 - Feb 2021',
+      description:
+        'Engineered and scaled customer-facing web experiences, improved performance through React refactors, implemented resilient authentication flows, and standardized frontend tooling to support faster team execution.',
     },
   ],
 }
