@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import type { FC } from 'react'
 import config from '../config/portfolio.config'
 
 export const Projects: FC = () => {

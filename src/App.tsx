@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import type { FC } from 'react'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { About } from './components/About'

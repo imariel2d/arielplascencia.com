@@ -1,4 +1,5 @@
-import React, { FC, useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import type { FC } from 'react'
 import config from '../config/portfolio.config'
 
 export const Navbar: FC = () => {
