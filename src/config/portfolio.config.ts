@@ -75,6 +75,13 @@ const config: PortfolioConfig = {
       liveUrl: 'https://focuswithpomo.com/',
     },
     {
+      title: 'Duckstore',
+      category: 'My Projects',
+      description: 'Online shopping project.',
+      tags: ['E-commerce', 'Social Commerce'],
+      liveUrl: 'https://www.instagram.com/duckstore.mx/',
+    },
+    {
       title: 'Culto Perro Cafe',
       category: 'Tepache Projects',
       description:
