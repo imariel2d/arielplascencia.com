@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
@@ -27,6 +28,7 @@ const App: FC = () => {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   )
 }
