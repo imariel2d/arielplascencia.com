@@ -67,12 +67,11 @@ const config: PortfolioConfig = {
 
   projects: [
     {
-      title: 'Pomodoro App',
+      title: 'Centavos',
       category: 'My Projects',
-      description:
-        'Pomodoro timer for studying, focus, and deep work to help people stay productive with structured work sessions.',
-      tags: ['React', 'TypeScript', 'Productivity'],
-      liveUrl: 'https://focuswithpomo.com/',
+      description: 'Budgeting app to help people track their money and take control of their finances.',
+      tags: ['Fintech', 'Budgeting', 'Web App'],
+      liveUrl: 'https://centavos.mx/',
     },
     {
       title: 'Duckstore',

@@ -1,3 +1,145 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* --- Duck pond animations --- */
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2.5deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2.5deg);
+  }
+}
+
+@keyframes bob-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translateX(-50%) scale(0.35);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-50%) scale(2.6);
+    opacity: 0;
+  }
+}
+
+@keyframes swim {
+  from {
+    transform: translateX(-25vw);
+  }
+  to {
+    transform: translateX(115vw);
+  }
+}
+
+@keyframes wave-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(14px, -8px);
+  }
+}
+
+.animate-bob {
+  animation: bob 3.5s ease-in-out infinite;
+}
+
+.animate-bob-soft {
+  animation: bob-soft 3s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 3.2s ease-in-out infinite;
+}
+
+.animate-swim {
+  animation: swim 28s linear infinite;
+  animation-fill-mode: both;
+}
+
+.animate-drift {
+  animation: drift 9s ease-in-out infinite;
+}
+
+.wave-track {
+  display: flex;
+  width: 200%;
+  animation: wave-slide 14s linear infinite;
+}
+
+.hover-wiggle:hover {
+  animation: wiggle 0.45s ease-in-out 2;
+}
+
+.ripple {
+  position: absolute;
+  left: 50%;
+  width: 110px;
+  height: 18px;
+  border: 1.5px solid rgba(255, 211, 77, 0.3);
+  border-radius: 9999px;
+  transform: translateX(-50%);
+  animation: ripple 3.2s ease-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bob,
+  .animate-bob-soft,
+  .animate-twinkle,
+  .animate-swim,
+  .animate-drift,
+  .wave-track,
+  .ripple {
+    animation: none;
+  }
+}
