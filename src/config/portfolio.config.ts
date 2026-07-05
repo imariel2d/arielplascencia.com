@@ -81,6 +81,14 @@ const config: PortfolioConfig = {
       liveUrl: 'https://www.instagram.com/duckstore.mx/',
     },
     {
+      title: 'Chess Analysis',
+      category: 'My Projects',
+      description:
+        'A fully offline chess analysis assistant with a desktop UI. Enter moves by dragging pieces, typing (natural language or algebraic), or speaking them — the app tracks the position, shows an eval bar, and tells you Stockfish\'s best move on screen and, optionally, out loud.',
+      tags: ['Chess', 'Stockfish', 'Desktop App', 'Offline'],
+      repoUrl: 'https://github.com/imariel2d/chess-analysis',
+    },
+    {
       title: 'Culto Perro Cafe',
       category: 'Tepache Projects',
       description:
