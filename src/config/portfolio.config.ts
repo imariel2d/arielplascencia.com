@@ -45,7 +45,7 @@ const config: PortfolioConfig = {
   email: 'imariel2d@gmail.com',
 
   socials: [
-    { label: 'GitHub', url: 'https://github.com/imariel2d', icon: 'github' },
+    { label: 'GitHub', url: 'https://github.com/arielplas', icon: 'github' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/arielplascencia/', icon: 'linkedin' },
     {
       label: 'Resume',
